@@ -82,3 +82,6 @@
   .shjkdahsjdhsjdassa {
     color: #fff;
   }
+:root {
+    --inago-chart-height: 170px !important
+}
