@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://bitupdown.vn/static/css/main.28fe1c00.css",
-    "main.js": "https://bitupdown.vn/static/js/main.bdcca413.js",
+    "main.css": "https://bitupdown.vn/static/css/main.7f76b321.css",
+    "main.js": "https://bitupdown.vn/static/js/main.d1d79ad6.js",
     "static/js/787.89ecc9f9.chunk.js": "https://bitupdown.vn/static/js/787.89ecc9f9.chunk.js",
     "index.html": "https://bitupdown.vn/index.html",
-    "main.28fe1c00.css.map": "https://bitupdown.vn/static/css/main.28fe1c00.css.map",
-    "main.bdcca413.js.map": "https://bitupdown.vn/static/js/main.bdcca413.js.map",
+    "main.7f76b321.css.map": "https://bitupdown.vn/static/css/main.7f76b321.css.map",
+    "main.d1d79ad6.js.map": "https://bitupdown.vn/static/js/main.d1d79ad6.js.map",
     "787.89ecc9f9.chunk.js.map": "https://bitupdown.vn/static/js/787.89ecc9f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28fe1c00.css",
-    "static/js/main.bdcca413.js"
+    "static/css/main.7f76b321.css",
+    "static/js/main.d1d79ad6.js"
   ]
 }
