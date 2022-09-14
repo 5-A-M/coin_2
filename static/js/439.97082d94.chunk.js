@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcoin_2=self.webpackChunkcoin_2||[]).push([[439],{2439:function(s,e,a){a.r(e);a(2791);var c=a(1301),l=a.n(c),n=a(184);e.default=function(s){return(0,n.jsx)("div",{className:"fjklssdjksajskfaasda",style:{width:"100%",height:"calc(40vh - 35px)"},children:(0,n.jsx)(l(),{symbol:"BINANCE:BTCUSDT",theme:c.Themes.DARK,locale:"ko",autosize:!0})})}}}]);
+//# sourceMappingURL=439.97082d94.chunk.js.map
