@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "https://bitupdown.vn/static/css/main.6fd9933f.css",
-    "main.js": "https://bitupdown.vn/static/js/main.99021401.js",
-    "static/css/975.2d5b3799.chunk.css": "https://bitupdown.vn/static/css/975.2d5b3799.chunk.css",
-    "static/js/975.ad553656.chunk.js": "https://bitupdown.vn/static/js/975.ad553656.chunk.js",
+    "main.js": "https://bitupdown.vn/static/js/main.464e35fa.js",
+    "static/css/600.ee60dbd0.chunk.css": "https://bitupdown.vn/static/css/600.ee60dbd0.chunk.css",
+    "static/js/600.ad51a4e4.chunk.js": "https://bitupdown.vn/static/js/600.ad51a4e4.chunk.js",
     "static/js/439.97082d94.chunk.js": "https://bitupdown.vn/static/js/439.97082d94.chunk.js",
     "static/js/375.eb7e24d6.chunk.js": "https://bitupdown.vn/static/js/375.eb7e24d6.chunk.js",
     "static/css/716.bd37131d.chunk.css": "https://bitupdown.vn/static/css/716.bd37131d.chunk.css",
@@ -16,9 +16,9 @@
     "static/js/615.fb6add24.chunk.js": "https://bitupdown.vn/static/js/615.fb6add24.chunk.js",
     "index.html": "https://bitupdown.vn/index.html",
     "main.6fd9933f.css.map": "https://bitupdown.vn/static/css/main.6fd9933f.css.map",
-    "main.99021401.js.map": "https://bitupdown.vn/static/js/main.99021401.js.map",
-    "975.2d5b3799.chunk.css.map": "https://bitupdown.vn/static/css/975.2d5b3799.chunk.css.map",
-    "975.ad553656.chunk.js.map": "https://bitupdown.vn/static/js/975.ad553656.chunk.js.map",
+    "main.464e35fa.js.map": "https://bitupdown.vn/static/js/main.464e35fa.js.map",
+    "600.ee60dbd0.chunk.css.map": "https://bitupdown.vn/static/css/600.ee60dbd0.chunk.css.map",
+    "600.ad51a4e4.chunk.js.map": "https://bitupdown.vn/static/js/600.ad51a4e4.chunk.js.map",
     "439.97082d94.chunk.js.map": "https://bitupdown.vn/static/js/439.97082d94.chunk.js.map",
     "375.eb7e24d6.chunk.js.map": "https://bitupdown.vn/static/js/375.eb7e24d6.chunk.js.map",
     "716.bd37131d.chunk.css.map": "https://bitupdown.vn/static/css/716.bd37131d.chunk.css.map",
@@ -32,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.6fd9933f.css",
-    "static/js/main.99021401.js"
+    "static/js/main.464e35fa.js"
   ]
 }
