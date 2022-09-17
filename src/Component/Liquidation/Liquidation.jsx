@@ -1,31 +1,42 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { memo } from "react";
 import { SERVER_URL } from "../config/config";
 import ScrollToBottom from "react-scroll-to-bottom";
-import { usePrevious2 } from "../CustomHook/usePrevious";
-import "./Liquidation.sass";
+// import "./Liquidation.sass";
 import TableLiquidation from "./TableLiquidation";
 import FilterPrice from "./FilterPrice";
 import Loading from "../Loading/Loading";
+import _ from "lodash"
+import { SocketContext } from "../WrapSocket/WrapSocket";
 
 const Liquidation = (props) => {
   const [data, setData] = useState(() => []);
-  const dataPrevious = usePrevious2(data);
   const [filterPrice, setFilterPrice] = useState(() => 0);
-  
+  const { socketState }= useContext(SocketContext)
   useEffect(() => {
-    const intervalId = setInterval(async () => {
+    (async () => {
       const res = await axios({
         url: `${SERVER_URL}/api/v1/get/liquidation`,
         method: "GET",
         responseType: "json",
       });
       const result = await res.data;
-      setData(() => result);
-    }, 1000);
-    return () => clearInterval(intervalId);
-  }, [data]);
+      return setData(()=> _.uniqWith(result, _.isEqual))
+    })();
+  }, []);
+  useEffect(()=> {
+    if(socketState) {
+      socketState?.emit("get_liquidation", {get: true})
+    }
+  }, [socketState])
+  useEffect(()=> {
+    if(socketState) {
+      socketState?.on("get_liquidation_from_server", dataS=> {
+        setData((prev)=> ([...prev, dataS]))
+      })
+    }
+  }, [])
   if (data.length > 0) {
     return (
       <ScrollToBottom mode="top" checkInterval={0}>
@@ -39,9 +50,10 @@ const Liquidation = (props) => {
         >
           <FilterPrice setFilterPrice={setFilterPrice} />
           <TableLiquidation
+            is_liquidation={props.is_liquidation}
             filterPrice={filterPrice}
             data={data}
-            dataPrevious={dataPrevious}
+            aHightLight={data.length}
           />
         </div>
       </ScrollToBottom>

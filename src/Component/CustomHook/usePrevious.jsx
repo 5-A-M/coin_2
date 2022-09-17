@@ -6,7 +6,7 @@ export default function usePrevious(value) {
     const ref= useRef()
     useEffect(()=> {
         (async()=> {
-            await fakesleep(650)
+            await fakesleep(100)
             ref.current= value
         })()
     }, [value])
@@ -17,9 +17,20 @@ export function usePrevious2(value) {
     const ref= useRef()
     useEffect(()=> {
         (async()=> {
-            await fakesleep(500)
+            await fakesleep(100)
             ref.current= value
         })()
     }, [value])
+    return ref.current
+}
+
+export function usePrevious3(value) {
+    const ref= useRef()
+    useEffect(()=> {
+        (async()=> {
+            await fakesleep(100)
+            ref.current= value
+        })()
+    })
     return ref.current
 }

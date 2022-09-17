@@ -1,4 +1,5 @@
 import React from 'react'
+import { memo } from 'react'
 import { AiOutlineArrowUp } from "react-icons/ai"
 import * as Scroll from "react-scroll"
 
@@ -13,4 +14,4 @@ const ScrollToBottom = (props) => {
   )
 }
 
-export default ScrollToBottom
+export default memo(ScrollToBottom)

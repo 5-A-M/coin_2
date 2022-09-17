@@ -1,11 +1,18 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { useEffect } from "react";
 // import Component1 from "./Component1/Component1";
 import Component2 from "./Component2/Component2";
-import Component3 from "./Component3/Component3";
-import Component4 from "./Component4/Component4";
-import Component5 from "./Component5/Component5";
+// import Component3 from "./Component3/Component3";
+// import Component4 from "./Component4/Component4";
+// import Component5 from "./Component5/Component5";
 import { useInView } from 'react-intersection-observer';
+import { lazy } from "react";
+import LoadingWrap1 from "../Loading/LoadingWrap1";
+
+// const Component2= lazy(()=> import("./Component2/Component2"))
+const Component3= lazy(()=> import("./Component3/Component3"))
+const Component4= lazy(()=> import("./Component4/Component4"))
+const Component5= lazy(()=> import("./Component5/Component5"))
 
 
 const Slide = (props) => {
@@ -35,17 +42,17 @@ const Slide = (props) => {
           {/* <div className="sp-slide" style={{height: "calc(100% - 35px)", width: "100%"}}>
             <Component1 />
           </div> */}
-          <div className="sp-slide" style={{height: "calc(100% - 35px)"}}>
-            <Component2 />
+           <div ref={ref} className="sp-slide" style={{height: "calc(100% - 35px)"}}>
+            <Suspense fallback={<LoadingWrap1 />}><Component5 inView={inView} /></Suspense>
           </div>
           <div className="sp-slide" style={{height: "calc(100% - 35px)"}}>
-            <Component3 />
+            <Suspense fallback={<LoadingWrap1 />}><Component3 /></Suspense>
           </div>
           <div className="sp-slide" style={{height: "calc(100% - 35px)"}}>
-            <Component4 />
+            <Suspense fallback={<LoadingWrap1 />}><Component4 /></Suspense>
           </div>
-          <div ref={ref} className="sp-slide" style={{height: "calc(100% - 35px)"}}>
-            {inView=== true && <Component5 />}
+          <div className="sp-slide" style={{height: "calc(100% - 35px)"}}>
+            <Suspense fallback={<LoadingWrap1 />}><Component2 /></Suspense>
           </div>
         </div>
         <div className="sp-thumbnails" style={{position: "relative", zIndex: 5, background: "#fff"}}>

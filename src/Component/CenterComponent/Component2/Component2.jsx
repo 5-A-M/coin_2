@@ -1,19 +1,38 @@
-import React from "react";
+import React, { memo, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import "./Component2.sass"
 
 const Component2 = (props) => {
+  useEffect(()=> {
+    const timeoutid= setTimeout(()=> {
+      const script3 = document.createElement("script");
+      script3.src = "https://inagoflyer.appspot.com/js/marketBoardData_btc.js";
+      document.body.appendChild(script3);
+      const script2= document.createElement("script")
+      script2.src= "https://res.cloudinary.com/cockbook/raw/upload/v1662961160/single/inago_bar_chart_setting.0.1_cmjkgs.js"
+      script2.defer= true
+      document.body.appendChild(script2)
+      const script = document.createElement("script");
+      script.src = "https://res.cloudinary.com/cockbook/raw/upload/v1662951500/single/cmac.0.2_fyh32o.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    }, 500)
+    return ()=> {
+      clearTimeout(timeoutid)
+    }
+  }, [])
   return (
     <div
       className="gjkdfkjdlflsdas"
       style={{ width: "100%", height: "calc(40vh - 35px)" }}
     >
       <Helmet>
-        <script
+        {/* <script
           type="text/javascript"
-          src="https://inagoflyer.appspot.com/js/google_analytics.js"
-        ></script>
-        <script type="text/javascript" src="https://res.cloudinary.com/cockbook/raw/upload/v1662524257/single/c_qhofsy.js"></script>
+          src="https://inagoflyer.appspot.com/js/inago_bar_chart_setting.0.1.js"
+          defer
+        ></script> */}
+        <script async type="text/javascript" src="https://res.cloudinary.com/cockbook/raw/upload/v1662524257/single/c_qhofsy.js"></script>
         <script
           type="text/javascript"
           src="https://js.pusher.com/4.4/pusher.min.js"
@@ -54,11 +73,7 @@ const Component2 = (props) => {
           src="https://inagoflyer.appspot.com/js/inago_sound.1.4.js"
           defer
         ></script>
-        <script
-          type="text/javascript"
-          src="https://inagoflyer.appspot.com/js/inago_bar_chart_setting.0.1.js"
-          defer
-        ></script>
+        
         <script
           type="text/javascript"
           src="https://inagoflyer.appspot.com/js/inago_bar_chart.0.5.js"
@@ -69,11 +84,7 @@ const Component2 = (props) => {
           src="https://inagoflyer.appspot.com/js/futures_date_map.js"
           defer
         ></script>
-        <script
-          type="text/javascript"
-          src="https://inagoflyer.appspot.com/js/marketBoardData_btc.js"
-          defer
-        ></script>
+        
         <script
           type="text/javascript"
           src="https://inagoflyer.appspot.com/js/marketBoardData_eth.js"
@@ -99,11 +110,21 @@ const Component2 = (props) => {
           src="https://inagoflyer.appspot.com/js/marketBoardData_bnb.js"
           defer
         ></script>
-        <script
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://inagoflyer.appspot.com/css/main2.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://inagoflyer.appspot.com/css/inago_bar_chart.css"
+        />
+        {/* <script
           type="text/javascript"
           src="https://inagoflyer.appspot.com/js/cmac.0.2.js"
           defer
-        ></script>
+        ></script>    */}
       </Helmet>
       <div className="wrapper" style={{height: "100%"}}>
         <div className="container" style={{height: "100%", padding: "5px 0px 0px 0px"}}>
@@ -129,21 +150,22 @@ const Component2 = (props) => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
 
-const HideChart= (props)=> {
+const HideChart= memo((props)=> {
   return (
     <div id={props.id} className={props.className} style={{display: "none"}}></div>
   )
-}
+})
 
-const ShowChart= (props)=> {
+const ShowChart= memo((props)=> {
   return (
     <div id={props.id} className={props.className} style={{}}></div>
   )
-}
+})
 
 const TitleContainer= (props)=> {
   return (

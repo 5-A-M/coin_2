@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import { HelmetProvider } from "react-helmet-async"
-import reportWebVitals from './reportWebVitals';
 import "./style.sass"
 import "./slide.css"
+import { lazy } from 'react';
+import LoadingWrap1 from './Component/Loading/LoadingWrap1';
+const App= lazy(()=> import("./App"))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <HelmetProvider>
-        <App />
+        <Suspense fallback={<LoadingWrap1 />}>
+            <App />
+        </Suspense>
     </HelmetProvider>
 );
 
-reportWebVitals();

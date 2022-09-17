@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-import "./style.sass"
 // import Category from "./Category";
 // import BreakLine from "../Entities/BreakLine";
 // import OrderBook from "./OrderBook";
@@ -15,7 +14,7 @@ import TBody from "./TBody";
 import Loading from "../Loading/Loading";
 
 const TradeLive = (props) => {
-  const array_thead= ["Boardname", "Takerside", "Volume", "Price", "Time"]
+  const array_thead= ["Exchange", "Symbol", "Takerside", "Volume", "Price", "Time"]
   // eslint-disable-next-line
   const [symbol, setSymbol] = useState(() => "BTC");
   // eslint-disable-next-line
@@ -68,6 +67,7 @@ const TradeLive = (props) => {
             width: "100%",
             height: "calc(100vh - 60px)",
             padding: 16,
+            paddingTop: 0, 
             overflow: "auto",
             display: "flex",
             flexDirection: "column",
@@ -76,9 +76,9 @@ const TradeLive = (props) => {
         >
           {/* <Spinner /> */}
           {/* <iframe frameBorder="0" scrolling="no" src="https://inagoflyer.appspot.com/btcmacwidget?width=100&widthUnit=per&height=240&heightUnit=px&columnCount=18&soundVolume=0.5&okexStatus=0" style={{width: "100%", height: 240}} title="Hihi"></iframe> */}
-          <table className="fhdjkehaukshajklwhasw" style={{width: "100%"}}>
+          <table cellSpacing={0} className="fhdjkehaukshajklwhasw" style={{width: "100%"}}>
             <THead array_thead={array_thead} {...props} />
-            <TBody data={data} {...props} />
+            <TBody className="sjlkdjdklasjdkljkasas fkjklsejaklwawsasas" data={data} {...props} />
           </table>
         </div>
       </Fragment>

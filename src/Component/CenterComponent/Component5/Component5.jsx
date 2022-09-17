@@ -25,18 +25,20 @@ const Component5 = (props) => {
     })()
   }, [])
   useEffect(() => {
-    const intervalId = setInterval(async () => {
-      const res = await axios({
-        url: `${SERVER_URL}/api/dit/me/thang/han/xeng`,
-        method: "get",
-        responseType: "json",
-      });
-      const result = await res.data;
-      setData(() => result);
-    }, 5000);
-
-    return () => clearInterval(intervalId);
-  }, []);
+    if(props.inView=== true) {
+      const intervalId = setInterval(async () => {
+        const res = await axios({
+          url: `${SERVER_URL}/api/dit/me/thang/han/xeng`,
+          method: "get",
+          responseType: "json",
+        });
+        const result = await res.data;
+        setData(() => result);
+      }, 5000);
+  
+      return () => clearInterval(intervalId);
+    }
+  }, [props.inView]);
   return (
     <div className="fjkldjsksadsasas" style={{width: "100%", height: "calc(40vh - 35px)", background: "#0a0618", paddingTop: 5}}>
       <Title />

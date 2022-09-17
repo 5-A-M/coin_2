@@ -4,7 +4,7 @@ import moment from 'moment'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { SERVER_URL } from '../config/config'
-import Spinner from '../Entities/Spinner'
+// import Spinner from '../Entities/Spinner'
 import Loading from '../Loading/Loading'
 
 const ArticleComponent = (props) => {

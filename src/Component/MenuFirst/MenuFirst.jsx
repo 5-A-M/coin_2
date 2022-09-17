@@ -2,7 +2,7 @@ import React from 'react'
 import { useMemo } from 'react'
 
 const MenuFrist = (props) => {
-  const arraySelect = useMemo(()=> [{value: 1, }, {value: 2, }, {value: 3, }, {value: 4, }], [])
+  const arraySelect = useMemo(()=> [{value: 1, }, {value: 2, }, {value: 3, }, {value: 4, }, {value: 5, }], [])
   return (
     <div className="fjkljaklasjks" style={{width: "35vw", height: "60px", display: "flex", justifyContent: 'center',alignItems: 'center', borderTop: "1px solid #e7e7e7"}}>
       {
