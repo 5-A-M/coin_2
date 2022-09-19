@@ -8,7 +8,7 @@ import redefine_coin from "../f/redefine_coin";
 import { HightLightComponent, TD } from "../Liquidation/TBody";
 
 const TR = (props) => {
-  const list_image_coin= [{exchange: "binance", logo: "https://cdn.coinglasscdn.com/static/exchanges/270.png"}, {exchange: "ftx", logo: "https://cdn.coinglasscdn.com/static/exchanges/524.png"}, {exchange: "okx", logo: "https://cdn.coinglasscdn.com/static/exchanges/OKX.png"}, {exchange: "coinbasepro", logo: "https://cdn.coinglasscdn.com/static/exchanges/CoinbasePro.png"}, {exchange: "digifinex", logo: "https://pbs.twimg.com/media/FJS7yTDXIAI2wJT.png"}, {exchange: "bitmex", logo: "https://cdn.coinglasscdn.com/static/exchanges/157.png"}, {exchange: "bitfinex", logo: "https://cdn.coinglasscdn.com/static/exchanges/bitfinex.jpg"}, {exchange: "kraken", logo: "https://cdn.coinglasscdn.com/static/exchanges/k.jpg"}, {exchange: "bybit", logo: "https://cdn.coinglasscdn.com/static/exchanges/521.png"}, {exchange: "bitstamp", logo: "https://w7.pngwing.com/pngs/283/335/png-transparent-bitstamp-hd-logo-thumbnail.png"}, {exchange: "dydx", logo: "https://cdn.coinglasscdn.com/static/coins/DYDX.png"}, {exchange: "bitflyer", logo: "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/coegmjwkf9novd7b0ueh"}]
+  const list_image_coin= [{exchange: "binance", logo: "https://cdn.coinglasscdn.com/static/exchanges/270.png"}, {exchange: "ftx", logo: "https://cdn.coinglasscdn.com/static/exchanges/524.png"}, {exchange: "okx", logo: "https://cdn.coinglasscdn.com/static/exchanges/OKX.png"}, {exchange: "coinbasepro", logo: "https://cdn.coinglasscdn.com/static/exchanges/CoinbasePro.png"}, {exchange: "digifinex", logo: "https://pbs.twimg.com/media/FJS7yTDXIAI2wJT.png"}, {exchange: "bitmex", logo: "https://cdn.coinglasscdn.com/static/exchanges/157.png"}, {exchange: "bitfinex", logo: "https://cdn.coinglasscdn.com/static/exchanges/bitfinex.jpg"}, {exchange: "kraken", logo: "https://cdn.coinglasscdn.com/static/exchanges/k.jpg"}, {exchange: "bybit", logo: "https://cdn.coinglasscdn.com/static/exchanges/521.png"}, {exchange: "bitstamp", logo: "https://w7.pngwing.com/pngs/283/335/png-transparent-bitstamp-hd-logo-thumbnail.png"}, {exchange: "dydx", logo: "https://cdn.coinglasscdn.com/static/coins/DYDX.png"}, {exchange: "bitflyer", logo: "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/coegmjwkf9novd7b0ueh"}, {exchange: "gemini", logo: "https://assets.coingecko.com/markets/images/50/large/gemini.png?1605704107"}]
   // const previousValue= usePrevious3(props)
   return (
     <tr
@@ -47,7 +47,7 @@ const TR = (props) => {
         {...props}
       />
       {
-        props?.point >= props?.indexT && <HightLightComponent />
+        props.componentHightLight
       }
     </tr>
   );

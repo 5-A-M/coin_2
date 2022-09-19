@@ -27,13 +27,6 @@ const TradeLive = (props) => {
   const [data3, setData3] = useState(() => []);
     // eslint-disable-next-line
   const [sizeFilter, setSizeFilter]= useState(()=> 0)
-  useEffect(()=> {
-    if(socketState) {
-      socketState.on("trade_live", data=> {
-        console.log(data)
-      })
-    }
-  }, [socketState])
   useEffect(() => {
     (async()=> {
       const res = await axios({
@@ -48,25 +41,15 @@ const TradeLive = (props) => {
       const result = await res.data;
       setData(() => result);
     })()
-
     return () => setData(()=> [])
   }, []);
-  // useEffect(() => {
-  //   const intervalId = setInterval(async () => {
-  //     const res = await axios({
-  //       url: `${SERVER_URL}/api/v1/coin/get`,
-  //       headers: {
-  //         'Access-Control-Allow-Origin': "*"
-  //       },
-  //       method: "GET",
-  //       responseType: "json",
-  //     });
-  //     const result = await res.data;
-  //     setData(() => result);
-  //   }, 5000);
-
-  //   return () => clearInterval(intervalId);
-  // }, []);
+  useEffect(()=> {
+    if(socketState) {
+      socketState.on("trade_live", dataS=> {
+        setData((prev)=> ([...prev, dataS.data]))
+      })
+    }
+  }, [])
   if(data.length > 0) {
     return (
       <Fragment>
@@ -89,6 +72,7 @@ const TradeLive = (props) => {
             <TBody 
               className="sjlkdjdklasjdkljkasas fkjklsejaklwawsasas" 
               data={data} 
+              aHightLight={data.length}
               {...props}
             />
           </table>
