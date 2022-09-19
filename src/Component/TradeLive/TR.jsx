@@ -37,7 +37,7 @@ const TR = (props) => {
         {...props}
       />
       <TD
-        className="dhfjkdhajksdhakjss fehuidshdasasrsdas hduisehuaksjaskl fjhrueiisjidsjiods fhukdhkjasorwueioaes fgnhjkfshiuohjdiassafssd"
+        className="dasfafafsdewewdsd dhfjkdhajksdhakjss fehuidshdasasrsdas hduisehuaksjaskl fjhrueiisjidsjiods fhukdhkjasorwueioaes fgnhjkfshiuohjdiassafssd"
         content={<NumberFormat prefix="$ " value={props.lastPrice} displayType={"text"} thousandSeparator={true} renderText={(value, props)=> <>{value}</>} />}
         {...props}
       />

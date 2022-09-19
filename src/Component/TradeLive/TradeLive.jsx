@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 // import Category from "./Category";
@@ -12,9 +12,11 @@ import { SERVER_URL } from "../config/config";
 import THead from "../Liquidation/THead";
 import TBody from "./TBody";
 import Loading from "../Loading/Loading";
+import { SocketContext } from "../WrapSocket/WrapSocket";
 
 const TradeLive = (props) => {
   const array_thead= ["Exchange", "Symbol", "Takerside", "Volume", "Price", "Time"]
+  const { socketState }= useContext(SocketContext)
   // eslint-disable-next-line
   const [symbol, setSymbol] = useState(() => "BTC");
   // eslint-disable-next-line
@@ -25,6 +27,13 @@ const TradeLive = (props) => {
   const [data3, setData3] = useState(() => []);
     // eslint-disable-next-line
   const [sizeFilter, setSizeFilter]= useState(()=> 0)
+  useEffect(()=> {
+    if(socketState) {
+      socketState.on("trade_live", data=> {
+        console.log(data)
+      })
+    }
+  }, [socketState])
   useEffect(() => {
     (async()=> {
       const res = await axios({
@@ -42,24 +51,23 @@ const TradeLive = (props) => {
 
     return () => setData(()=> [])
   }, []);
-  useEffect(() => {
-    const intervalId = setInterval(async () => {
-      const res = await axios({
-        url: `${SERVER_URL}/api/v1/coin/get`,
-        headers: {
-          'Access-Control-Allow-Origin': "*"
-        },
-        method: "GET",
-        responseType: "json",
-      });
-      const result = await res.data;
-      setData(() => result);
-    }, 5000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(async () => {
+  //     const res = await axios({
+  //       url: `${SERVER_URL}/api/v1/coin/get`,
+  //       headers: {
+  //         'Access-Control-Allow-Origin': "*"
+  //       },
+  //       method: "GET",
+  //       responseType: "json",
+  //     });
+  //     const result = await res.data;
+  //     setData(() => result);
+  //   }, 5000);
 
-    return () => clearInterval(intervalId);
-  }, []);
+  //   return () => clearInterval(intervalId);
+  // }, []);
   if(data.length > 0) {
-
     return (
       <Fragment>
         <div
@@ -78,7 +86,11 @@ const TradeLive = (props) => {
           {/* <iframe frameBorder="0" scrolling="no" src="https://inagoflyer.appspot.com/btcmacwidget?width=100&widthUnit=per&height=240&heightUnit=px&columnCount=18&soundVolume=0.5&okexStatus=0" style={{width: "100%", height: 240}} title="Hihi"></iframe> */}
           <table cellSpacing={0} className="fhdjkehaukshajklwhasw" style={{width: "100%"}}>
             <THead array_thead={array_thead} {...props} />
-            <TBody className="sjlkdjdklasjdkljkasas fkjklsejaklwawsasas" data={data} {...props} />
+            <TBody 
+              className="sjlkdjdklasjdkljkasas fkjklsejaklwawsasas" 
+              data={data} 
+              {...props}
+            />
           </table>
         </div>
       </Fragment>

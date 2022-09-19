@@ -94,7 +94,7 @@ const TR = (props) => {
       <TD className="dhfjkdhajksdhakjss yeurihsukdhjnjksa fjdklsdjslkjdkdsasew rfu8oeuasasadfvcsd" content={props?.market} {...props} />
       
       <TD
-        className="dhfjkdhajksdhakjss fehuidshdasasrsdas hduisehuaksjaskl fjhrueiisjidsjiods fhukdhkjasorwueioaes fgnhjkfshiuohjdiassafssd sujdiduaiosuasiasjas"
+        className="ajkdhjksdhsjkdskas dhfjkdhajksdhakjss fehuidshdasasrsdas hduisehuaksjaskl fjhrueiisjidsjiods fhukdhkjasorwueioaes fgnhjkfshiuohjdiassafssd sujdiduaiosuasiasjas"
         content={"$ "+ props.liquidatedAmunt.replace("$", "")}
         {...props}
       />
@@ -107,7 +107,7 @@ const TR = (props) => {
         {...props}
       />
       <TD
-        className="dhfjkdhajksdhakjss fgnhjkfshiuohjdiassafssd jdfiojsaijkleiuedasasas"
+        className="dhfjkdhajksdhakjss fgnhjkfshiuohjdiassafssd jdfiojsaijkleiuedasasas fgdfgdfadeasweawa"
         content={moment(props?.unixtime).format("hh:mm:ss A")}
         {...props}
       />

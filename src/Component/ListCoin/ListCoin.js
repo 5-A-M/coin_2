@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import MainList from "./MainList";
 import { useInView } from "react-intersection-observer";
 // import ScrollToBottom from "./ScrollToBottom";
-import "./ListCoin.sass";
 import { SERVER_URL } from "../config/config";
 import THead from "./THead";
 import Pagination from "./Pagination";
