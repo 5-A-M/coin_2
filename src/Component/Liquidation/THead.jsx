@@ -16,6 +16,6 @@ export default THead
 
 const TD= (props)=> {
   return (
-    <td className={`eyuoiekoaslsaas cjdjaklsajssa roruwoieaklsaks ${props.className}`} style={{display: "flex", justifyContent: 'center', alignItems: "center"}}>{props.item}</td>
+    <td className={`eyuoiekoaslsaas cjdjaklsajssa roruwoieaklsaks ${props.className}`} style={{display: "flex", justifyContent: 'center', alignItems: "center"}}><span className={"dsdsdsdfsdfgfead jdklajkalsjaklsasas"}>{props.item}</span></td>
   )
 }

@@ -130,8 +130,8 @@ export const TD = (props) => {
       style={{ overflow: "hidden", textOverflow: "ellipsis" }}
     >
       {props?.logo && <><img alt={"open"} src={props?.logo} style={{width: 24, height: 24, objectFit: "contain"}} />&nbsp;&nbsp;</>}
-      {props.arrowIcon && props.arrowIcon}
-      {props.content}
+      <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span className={"jdklajkalsjaklsasas"} style={{fontSize: 12}}>{props.arrowIcon && props.arrowIcon}</span>
+      <span className={"jdklajkalsjaklsasas"} style={{fontSize: 12}}>{props.content}</span></div>
       {<span className={props.classNameX} style={{fontSize: 14}}>{props.contentx}</span>}
     </td>
   );
