@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "https://bitupdown.vn/static/css/main.990c987b.css",
-    "main.js": "https://bitupdown.vn/static/js/main.527f4b95.js",
+    "main.js": "https://bitupdown.vn/static/js/main.67436159.js",
     "static/css/301.06dde82b.chunk.css": "https://bitupdown.vn/static/css/301.06dde82b.chunk.css",
-    "static/js/301.cd32ccf1.chunk.js": "https://bitupdown.vn/static/js/301.cd32ccf1.chunk.js",
+    "static/js/301.07f42d86.chunk.js": "https://bitupdown.vn/static/js/301.07f42d86.chunk.js",
     "static/js/439.97082d94.chunk.js": "https://bitupdown.vn/static/js/439.97082d94.chunk.js",
     "static/js/375.eb7e24d6.chunk.js": "https://bitupdown.vn/static/js/375.eb7e24d6.chunk.js",
     "static/css/716.bd37131d.chunk.css": "https://bitupdown.vn/static/css/716.bd37131d.chunk.css",
@@ -16,9 +16,9 @@
     "static/js/615.fb6add24.chunk.js": "https://bitupdown.vn/static/js/615.fb6add24.chunk.js",
     "index.html": "https://bitupdown.vn/index.html",
     "main.990c987b.css.map": "https://bitupdown.vn/static/css/main.990c987b.css.map",
-    "main.527f4b95.js.map": "https://bitupdown.vn/static/js/main.527f4b95.js.map",
+    "main.67436159.js.map": "https://bitupdown.vn/static/js/main.67436159.js.map",
     "301.06dde82b.chunk.css.map": "https://bitupdown.vn/static/css/301.06dde82b.chunk.css.map",
-    "301.cd32ccf1.chunk.js.map": "https://bitupdown.vn/static/js/301.cd32ccf1.chunk.js.map",
+    "301.07f42d86.chunk.js.map": "https://bitupdown.vn/static/js/301.07f42d86.chunk.js.map",
     "439.97082d94.chunk.js.map": "https://bitupdown.vn/static/js/439.97082d94.chunk.js.map",
     "375.eb7e24d6.chunk.js.map": "https://bitupdown.vn/static/js/375.eb7e24d6.chunk.js.map",
     "716.bd37131d.chunk.css.map": "https://bitupdown.vn/static/css/716.bd37131d.chunk.css.map",
@@ -32,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.990c987b.css",
-    "static/js/main.527f4b95.js"
+    "static/js/main.67436159.js"
   ]
 }
