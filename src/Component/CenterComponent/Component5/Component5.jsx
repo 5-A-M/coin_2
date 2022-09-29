@@ -5,6 +5,7 @@ import { SERVER_URL } from '../../config/config'
 import "./style.sass"
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import usePrevious, { usePrevious4 } from '../../CustomHook/usePrevious'
 
 
 const Component5 = (props) => {
@@ -52,6 +53,7 @@ const Component5 = (props) => {
 
 const ComponentComponent= (props)=> {
   const array_logo= [{src: "https://cdn.coinglasscdn.com/static/exchanges/157.png", type: "img"}, {src: "https://cdn.coinglasscdn.com/static/exchanges/bitfinex.jpg", type: "img"}, {src: "https://cdn.coinglasscdn.com/static/exchanges/270.png", type: "img"}, {src: "Total", type: "txt"}]
+  
   return (
     <div className="djkdajksajsafdsd" style={{flex: "1 1 0", height: "100%"}}>
       <SymbolName symbolName={"BTC"} logo={"https://s2.coinmarketcap.com/static/img/coins/200x200/1.png"} />
@@ -101,6 +103,11 @@ const SymbolName= (props)=> {
 }
 
 const LongorShortRatio= (props)=> {
+  // const percentLongPrevious= usePrevious4(props.percentLong)
+  // const percentShortPrevious= usePrevious4(props.percentShort)
+  const volumeLongPrevious= usePrevious4(parseInt(props.volumeLong.replaceAll(",", "").replaceAll("$", "")))
+  const volumeShortPrevious= usePrevious4(parseInt(props.volumeShort.replaceAll(",", "").replaceAll("$", "")))
+
   return (
     <tr className="shjkdahsjdhsjdassa fdjdsdjklsdjksldkjs" style={{display: "flex", justifyContent: "space-between" , alignItems: "center", height: "calc((100% - 30px) / 4)"}}>
       <td className="kdasksjaksjaksasassa" style={{width: 50, display: "flex", justifyContent: "center" ,alignItems: "center"}}>
@@ -108,11 +115,11 @@ const LongorShortRatio= (props)=> {
         {props.type=== "txt" && <p className="dsjkajksasasas" id="dsjkdjaksaasas" style={{fontSize: 18, fontWeight: 600}}>{props.exchangeLogo}</p>}
       </td>
       <td className='hjajajasjassjaasjasj' style={{flex: "1 1 0", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column", gap: 5, borderLeft: "1px solid #2e89ff", borderRight: "1px solid #2e89ff"}}>
-        <span className="fdjdshdkldjhaklsjaks" style={{color: "green", fontWeight: 600}}>{props.inView=== true ? <CountUp end={parseInt(props.volumeLong.replaceAll(",", "").replaceAll("$", ""))} duration={2} separator={","} prefix={"$ "} /> : "_"}</span>
+        <span className="fdjdshdkldjhaklsjaks" style={{color: "#089981", fontWeight: 600}}>{props.inView=== true ? <CountUp start={volumeLongPrevious} end={parseInt(props.volumeLong.replaceAll(",", "").replaceAll("$", ""))} duration={2} separator={","} prefix={"$ "} /> : "_"}</span>
         <span className="fhjdhajshasjashkariw" style={{fontSize: 14, fontWeight: 600}}>( {props.percentLong} )</span>
       </td>
       <td className='shdsjajkrealkdakawas' style={{flex: "1 1 0", display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column", gap: 5}}>
-        <span className="fhjdhasjhsjahsjawaw" style={{color: "red", fontWeight: 600}}>{props.inView=== true ? <CountUp end={parseInt(props.volumeShort.replaceAll(",", "").replaceAll("$", ""))} duration={2} separator={","} prefix={"$ "} /> : "_"}</span>
+        <span className="fhjdhasjhsjahsjawaw" style={{color: "#f23645", fontWeight: 600}}>{props.inView=== true ? <CountUp start={volumeShortPrevious} end={parseInt(props.volumeShort.replaceAll(",", "").replaceAll("$", ""))} duration={2} separator={","} prefix={"$ "} /> : "_"}</span>
         <span className="fhjdshjaiwarwetarea" style={{fontSize: 14, fontWeight: 600}}>({props.percentShort})</span>
       </td>
     </tr>

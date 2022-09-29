@@ -494,7 +494,7 @@ const SymbolName = memo((props) => {
       }}
     >
       <Logo {...props} />
-      {props.qc_key}
+      {props.symbol_name}
     </td>
   );
 });

@@ -12,12 +12,6 @@ const TBody = (props) => {
   if (props.data) {
     return (
       <tbody className="fjskdhasjhasasa">
-        {
-          props.al && console.log(props.al)
-        }
-        {
-          previousAl && console.log(previousAl)
-        }
         {parseInt(props?.filterPrice) <= 0 && props?.data?.map((item, key) => (
           <TR
             p={previousAl}
@@ -96,6 +90,8 @@ const TR = (props) => {
       <TD
         className="ajkdhjksdhsjkdskas dhfjkdhajksdhakjss fehuidshdasasrsdas hduisehuaksjaskl fjhrueiisjidsjiods fhukdhkjasorwueioaes fgnhjkfshiuohjdiassafssd sujdiduaiosuasiasjas"
         content={"$ "+ props.liquidatedAmunt.replace("$", "")}
+        xx={"huidyheuiawewsasa"}
+        sss={"wdnjksnjkasdslsdas"}
         {...props}
       />
       <TD
@@ -126,11 +122,11 @@ export const TD = (props) => {
     <td
       className={`${
         props?.className || "dsajksasadasasj"
-      } dsjklasjilksjaasasas`}
+      } dsjklasjilksjaasasas ${props.sss}`}
       style={{ overflow: "hidden", textOverflow: "ellipsis" }}
     >
       {props?.logo && <><img alt={"open"} src={props?.logo} style={{width: 24, height: 24, objectFit: "contain"}} />&nbsp;&nbsp;</>}
-      <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span className={"jdklajkalsjaklsasas"} style={{fontSize: 12}}>{props.arrowIcon && props.arrowIcon}</span>
+      <div className={`${props.xx}`} style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span className={`jdklajkalsjaklsasas`} style={{fontSize: 12}}>{props.arrowIcon && props.arrowIcon}</span>
       <span className={"jdklajkalsjaklsasas"} style={{fontSize: 12}}>{props.content}</span></div>
       {<span className={props.classNameX} style={{fontSize: 14}}>{props.contentx}</span>}
     </td>

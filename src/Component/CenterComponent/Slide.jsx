@@ -8,6 +8,7 @@ import Component2 from "./Component2/Component2";
 import { useInView } from 'react-intersection-observer';
 import { lazy } from "react";
 import LoadingWrap1 from "../Loading/LoadingWrap1";
+import Component6 from "./Component6/Component6";
 
 // const Component2= lazy(()=> import("./Component2/Component2"))
 const Component3= lazy(()=> import("./Component3/Component3"))
@@ -54,13 +55,16 @@ const Slide = (props) => {
           <div className="sp-slide" style={{height: "calc(100% - 35px)"}}>
             <Suspense fallback={<LoadingWrap1 />}><Component2 /></Suspense>
           </div>
+          <div className="sp-slide" style={{height: "calc(100% - 35px)"}}>
+            <Component6 />
+          </div>
         </div>
         <div className="sp-thumbnails" style={{position: "relative", zIndex: 5, background: "#fff"}}>
           <div className="sp-thumbnail">btn1 </div>
           <div className="sp-thumbnail">btn2 </div>
           <div className="sp-thumbnail">btn3 </div>
           <div className="sp-thumbnail">btn4 </div>
-          {/* <div className="sp-thumbnail">btn5 </div> */}
+          <div className="sp-thumbnail">btn5 </div>
         </div>
       </div>
     </div>

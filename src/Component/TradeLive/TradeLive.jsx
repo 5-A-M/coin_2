@@ -70,7 +70,8 @@ const TradeLive = (props) => {
           <table cellSpacing={0} className="fhdjkehaukshajklwhasw" style={{width: "100%"}}>
             <THead array_thead={array_thead} {...props} />
             <TBody 
-              className="sjlkdjdklasjdkljkasas fkjklsejaklwawsasas" 
+              is_tradelive={true}
+              className="sjlkdjdklasjdkljkasas fkjklsejaklwawsasas djklasjskalwaiwaaw" 
               data={data} 
               aHightLight={data.length}
               {...props}

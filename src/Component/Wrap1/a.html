@@ -1,0 +1,895 @@
+
+<html lang="en" >
+    <head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112313239-1"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+              dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'UA-112313239-1');
+      </script>
+  
+      <base href="">
+      <meta charset="utf-8"/>
+      <title>Volume Screener -  Xypher.IO</title>
+      <meta name="description" content="Updates and statistics"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>        <!--end::Fonts-->
+      <link href="https://xypher.io/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+      <link href="https://xypher.io/assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css"/>
+      <link href="https://xypher.io/assets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
+      <link rel="shortcut icon" href="https://xypher.io/assets/media/logos/favicon.ico"/>
+      <link href="https://xypher.io/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body  id="kt_body"  class="header-static header-mobile-fixed subheader-enabled page-loading"  >
+  
+      <div id="kt_header_mobile" class="header-mobile  header-mobile-fixed " >
+        <div class="d-flex align-items-center">
+          <a href="https://xypher.io/" class="mr-7">
+            <img alt="Logo" src="https://xypher.io/img/v2.png" class="max-h-30px"/>
+          </a>
+        </div>
+        <div class="d-flex align-items-center">
+          <button class="btn p-0 burger-icon ml-4" id="kt_header_mobile_toggle"><span></span></button>
+          <button class="btn p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+            <span class="svg-icon svg-icon-xl">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <polygon points="0 0 24 0 24 24 0 24"/>
+                  <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                  <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+                </g>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-root">
+        <div class="d-flex flex-row flex-column-fluid page">
+          <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+  
+            <div id="kt_header" class="header flex-column  header-fixed " >
+              <div class="header-top">
+                <div class=" container ">
+                  <div class="d-none d-lg-flex align-items-center mr-3">
+                    <a href="https://xypher.io/" class="mr-10">
+                      <img alt="Logo" src="https://xypher.io/img/v2.png" class="max-h-75px"/>
+                    </a>
+                  </div>
+                  <div class="topbar">
+                    
+  
+  
+                    <div class="topbar-item">
+                      <div class="btn btn-icon w-auto d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+                        <div class="d-flex text-right pr-3">
+                          <span class="text-white opacity-50 font-weight-bold font-size-sm d-none d-md-inline mr-1">Hi</span>
+                          <span class="text-white font-weight-bolder font-size-sm d-none d-md-inline">Xypherian</span>
+                        </div>
+                        <span class="symbol symbol-35">
+                          <span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-15">X</span>
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div class="topbar-item">
+                      <a href="https://xypher.io/Pro">
+                        <span class="btn btn-primary">GET XYPHER PRO</span>
+                      </a>
+                    </div>
+                                                    </div>
+                </div>
+              </div>
+  
+              <div class="header-bottom">
+                <div class=" container ">
+                  <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+                    <div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile  header-menu-layout-default " >
+                      <ul class="menu-nav ">
+                        <li class="menu-item  "  aria-haspopup="true">
+                          <a  href="https://xypher.io/" class="menu-link ">
+                            <span class="menu-text">Dashboard</span>
+                          </a>
+                        </li>
+  
+  
+  
+  
+  
+                        
+  
+                          <li class="menu-item  menu-item-submenu menu-item-rel "  data-menu-toggle="click" aria-haspopup="true">
+                            <a  href="javascript:;" class="menu-link menu-toggle">
+                              <span class="menu-text">Alerts</span>
+                              <span class="menu-desc"></span>
+                              <i class="menu-arrow"></i>
+                            </a>
+                            <div class="menu-submenu menu-submenu-classic menu-submenu-left" >
+                              <ul class="menu-subnav">
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a href="https://xypher.io/WhaleSniper" class="menu-link ">
+                                    <span class="menu-text">Whale Sniper</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a href="https://xypher.io/Alerts/TV" class="menu-link ">
+                                    <span class="menu-text">TradingView</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+  
+  
+                          <li class="menu-item  menu-item-submenu menu-item-rel "  data-menu-toggle="click" aria-haspopup="true">
+                            <a  href="javascript:;" class="menu-link menu-toggle">
+                              <span class="menu-text">Screeners</span>
+                              <span class="menu-desc"></span>
+                              <i class="menu-arrow"></i>
+                            </a>
+                            <div class="menu-submenu menu-submenu-classic menu-submenu-left" >
+                              <ul class="menu-subnav">
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a target="_blank" href="https://xypher.io/Screener" class="menu-link ">
+                                    <span class="menu-text">Technical Screener</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a target="_blank" href="https://xypher.io/Screener/Volume" class="menu-link ">
+                                    <span class="menu-text">Volume Screener</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a target="_blank" href="https://xypher.io/Screener/Arbitrage" class="menu-link ">
+                                    <span class="menu-text">Arbitrage Screener</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a target="_blank" href="https://xypher.io/Screener/Chart" class="menu-link ">
+                                    <span class="menu-text">Chart Screener</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a target="_blank" href="https://xypher.io/Screener/Liquidation" class="menu-link ">
+                                    <span class="menu-text">Liquidation Screener</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="menu-item "  aria-haspopup="true">
+                            <a  href="https://xypher.io/Help" class="menu-link ">
+                              <span class="menu-text">Support</span>
+                            </a>
+                          </li>
+                          <li class="menu-item  menu-item-submenu menu-item-rel "  data-menu-toggle="click" aria-haspopup="true">
+                            <a  href="javascript:;" class="menu-link menu-toggle">
+                              <span class="menu-text">More</span>
+                              <span class="menu-desc"></span>
+                              <i class="menu-arrow"></i>
+                            </a>
+                            <div class="menu-submenu menu-submenu-classic menu-submenu-left" >
+                              <ul class="menu-subnav">
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a href="https://xypher.io/API" class="menu-link ">
+                                    <span class="menu-text">API</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a href="https://xypher.io/Bots" class="menu-link ">
+                                    <span class="menu-text">Bots</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a href="https://xypher.io/Demo" class="menu-link ">
+                                    <span class="menu-text">Telegram Channels</span>
+                                  </a>
+                                </li>
+                                <li class="menu-item "  aria-haspopup="true">
+                                  <a href="https://xypher.io/Advertise" class="menu-link ">
+                                    <span class="menu-text">Advertise</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+  
+                        
+  
+  
+  
+  
+  
+                      </ul>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+  
+            
+            <div class="content  d-flex flex-column flex-column-fluid" id="kt_content">
+                          <div class="subheader py-2 py-lg-6  subheader-transparent " id="kt_subheader">
+                <div class=" container  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+                  <div class="d-flex align-items-center flex-wrap mr-1">
+                    <div class="d-flex align-items-baseline flex-wrap mr-5">
+                      <h6 class="text-dark font-weight-bold">
+                        <a href="https://xypher.io/">Home</a>
+                                                > <a href="https://xypher.io/Screener">Screener</a>
+                                                                                            > Volume                    </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                          <div class="d-flex flex-column-fluid">
+                <div class="container">
+  
+            <style media="screen">
+  .dank  {
+    padding-left: 10px;
+    border-left: 1px solid #ebedf2; }
+  </style>
+  
+  
+  <div class="card card-custom gutter-b" id="TableContainer">
+    <div class="card-header flex-wrap py-3">
+      <div class="card-title">
+        <h3 class="card-label">Volume Screener</h3>
+      </div>
+      <div class="card-toolbar" id="vs_b">
+  
+      <div class="card-toolbar pr-2" id="search_vs"></div>
+      </div>
+  
+    </div>
+    <div class="card-body" >
+  
+      <div class="row">
+        <div class="col-6 col-sm-4">
+          Timeframe
+          <div role="btn-group" id ='vsf' data-toggle="buttons">
+            <div class="row">
+              <div class="col-6 col-sm-3">
+                <label class="btn btn-block btn-outline-secondary active">
+                  <input type="radio" style="display:none" id="TimeFrame_5m" name="TimeFrame" value="5m" autocomplete="off" checked>5m
+                </label>
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="btn btn-block btn-outline-secondary">
+                  <input type="radio" style="display:none" id="TimeFrame_15m" name="TimeFrame" value="15m" autocomplete="off">15m
+                </label>
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="btn btn-block btn-outline-secondary">
+                  <input type="radio" style="display:none" id="TimeFrame_30m" name="TimeFrame" value="30m" autocomplete="off">30m
+                </label>
+              </div>
+              <div class="col-6 col-sm-3">
+                <label class="btn btn-block btn-outline-secondary">
+                  <input type="radio" style="display:none" id="TimeFrame_1h" name="TimeFrame" value="1h" autocomplete="off">1h
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-6 col-sm-2">
+          Exchange
+          <select id="ScanExchange" name="ScanExchange" class="form-control">
+            <option value="All">All (Spot)</option>
+            <option value="AllDerivatives">All (Derivatives)</option>
+            <option value="Binance" selected>Binance</option>
+            <option value="Binance Futures" selected>Binance (Derivatives)</option>
+            <option value="Coinbase">Coinbase</option>
+            <option value="Ftx">FTX</option>
+            <option value="Ftx Futures">FTX (Derivatives)</option>
+            <option value="Bitmex">BitMEX</option>
+            <option value="Huobi">Huobi</option>
+            <option value="Bittrex">Bittrex</option>
+          </select>
+        </div>
+        <div class="col-6 col-sm-2">
+          Quote
+  
+          <select id="quote" name="quote" class="form-control">
+            <option value="All">All</option>
+            <option value="BTC">BTC</option>
+            <option value="USDT" selected>USDT</option>
+            <option value="ETH">ETH</option>
+            <option value="BNB">BNB</option>
+            <option value="USD">USD</option>
+            <option value="XBT">XBT</option>
+            <option value="GBP">GBP</option>
+            <option value="EUR">EUR</option>
+            <option value="TRY">TRY</option>
+            <option value="USDC">USDC</option>
+            <option value="BUSD">BUSD</option>
+            <option value="DAI">DAI</option>
+            <option value="TUSD">TUSD</option>
+            <option value="USDC">USDC</option>
+            <option value="HT">HT</option>
+          </select>
+        </div>
+  
+        <div class="col-6 col-sm-1">
+          Min Vol
+          <input id="MinVol" name="MinVol" class="form-control" value="0">
+        </div>
+        <div class="col-6 col-sm-1" >
+          Max Vol
+          <input id="MaxVol" name="MaxVol" class="form-control" value="0">
+        </div>
+        <div class="col-6 col-sm-2">
+          <br>
+          <input type="submit" id="ScanSub" class="btn btn-primary btn-block" placeholder="Refresh" value="Refresh"></input>
+        </div>
+      </div>
+  
+      <table id="VolumeScanner" class="table lead table-striped table-bordered table-hover  order-column" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>Exchange</th>
+            <th>Symbol</th>
+            <th>Quote</th>
+            <th>Base</th>
+            <th>Bought</th>
+            <th>Sold</th>
+            <th>Total Traded</th>
+            <th>Diff</th>
+            <th>Total % 24H V</th>
+            <th>24H Vol</th>
+          </tr>
+        </thead>
+      </table>
+  
+  
+    </div>
+  </div>
+  
+  
+  <div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Volume Scanner: Quickstart Guide</h5>
+          <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-light btn-icon btn-sm"> <span class="flaticon2-cross"></span> </button>
+        </div>
+        <div class="modal-body">
+          The Volume Scanner tracks each pair and computes how much has been bought and sold.<br> We offer the stats of the last <b>5 and 15 minutes</b>, and we are looking to add support for 30 and 60 minutes soon.<br><br>
+  
+          Here is a quick explanation of the meaning of each column on the table:<br>
+  
+          <b>Bought</b>: refers to the amount that has been bought.<br><br>
+  
+          <b>Sold</b>: refers to the amount that has been sold.<br><br>
+  
+          <b>Total Traded</b>: refers to the total amount that has been traded. This is basically a sum of the bought and the sold amount.<br><br>
+  
+          <b>Diff</b>: this column shows the net difference of the amounts traded. This is basically the amount bought minus the amount sold. A positive value indicates buying pressure, while a negative value implies selling pressure.<br><br>
+  
+          <b>Total % 24HV</b>: This value indicates how much of the total traded equals in percentage to the 24 Hours volume. <br><br>
+  
+          For example:<br>
+          Total traded: 10 BTC<br>
+          24H Volume: 100 BTC<br>
+          Total % 24HV: 10% (Since the total traded in the selected timeframe equals to the 10% of the 24H volume)<br><br>
+  
+          <b>Vol</b>: The total amount traded in Bitcoin during the last 24H hours.
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+        <div class="footer bg-dark py-4 d-flex flex-lg-column " id="kt_footer">
+          <div class=" container  d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="text-dark order-2 order-md-1">
+              <span class="text-muted font-weight-bold mr-2">2022 </span>
+              <a href="https://xypher.io/" class="text-dark-75 text-hover-primary">Xypher.IO</a>
+            </div>
+            <div class="nav nav-dark order-1 order-md-2">
+              <a href="https://xypher.io/Advertise" target="_blank" class="nav-link pl-3 pr-0">Advertise</a>
+              <a href="https://xypher.io/Contact" target="_blank" class="nav-link pl-3 pr-0">Contact</a>
+              <a href="https://xypher.io/Help" target="_blank" class="nav-link pl-3 pr-0">Help</a>
+              <a href="https://xypher.io/Terms" target="_blank" class="nav-link pl-3 pr-0">Terms</a>
+              <a href="https://xypher.io/Privacy" target="_blank" class="nav-link pl-3 pr-0">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+  </div>
+  
+  <div id="kt_quick_user" class="offcanvas offcanvas-right p-10">
+    <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
+      <h3 class="font-weight-bold m-0">
+        Your Profile
+                <small class="text-muted font-size-sm ml-2">
+            1 notification        </small>
+            </h3>
+      <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
+        <i class="ki ki-close icon-xs text-muted"></i>
+      </a>
+    </div>
+  
+  
+    <div class="offcanvas-content pr-5 mr-n5">
+      <div class="d-flex align-items-center mt-5">
+        <div class="symbol symbol-100 mr-5">
+          <i class="symbol-badge bg-success"></i>
+  
+          <span class="symbol symbol-35">
+            <span class="symbol-label display2 font-weight-bold text-dark bg-dark-o-40">X</span>
+          </span>
+        </div>
+        <div class="d-flex flex-column">
+          <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">
+            Xypherian        </a>
+          <div class="text-muted mt-1">
+                        <a href="https://xypher.io/Buy">Free User</a>
+                    </div>
+          <div class="navi mt-2">
+            <a href="https://xypher.io/logout" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="separator separator-dashed mt-8 mb-5"></div>
+      <div class="navi navi-spacer-x-0 p-0">
+  
+        <a href="https://xypher.io/settings" class="navi-item">
+          <div class="navi-link">
+            <div class="symbol symbol-40 bg-light mr-3">
+              <div class="symbol-label">
+                <span class="svg-icon svg-icon-md svg-icon-success">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <rect x="0" y="0" width="24" height="24"/>
+                      <path d="M13.2070325,4 C13.0721672,4.47683179 13,4.97998812 13,5.5 C13,8.53756612 15.4624339,11 18.5,11 C19.0200119,11 19.5231682,10.9278328 20,10.7929675 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 L13.2070325,4 Z" fill="#000000"/>
+                      <circle fill="#000000" opacity="0.3" cx="18.5" cy="5.5" r="2.5"/>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="navi-text">
+              <div class="font-weight-bold">
+                My Profile
+              </div>
+              <div class="text-muted">
+                Account settings and more
+              </div>
+            </div>
+          </div>
+        </a>
+  
+        <a href="https://xypher.io/Notifications"  class="navi-item">
+          <div class="navi-link">
+            <div class="symbol symbol-40 bg-light mr-3">
+              <div class="symbol-label">
+                <span class="svg-icon svg-icon-md svg-icon-warning">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <rect x="0" y="0" width="24" height="24"/>
+                      <rect fill="#000000" opacity="0.3" x="12" y="4" width="3" height="13" rx="1.5"/>
+                      <rect fill="#000000" opacity="0.3" x="7" y="9" width="3" height="8" rx="1.5"/>
+                      <path d="M5,19 L20,19 C20.5522847,19 21,19.4477153 21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 C4.55228475,3 5,3.44771525 5,4 L5,19 Z" fill="#000000" fill-rule="nonzero"/>
+                      <rect fill="#000000" opacity="0.3" x="17" y="11" width="3" height="6" rx="1.5"/>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="navi-text">
+              <div class="font-weight-bold">
+                My Messages
+              </div>
+              <div class="text-muted">
+                Notifications
+              </div>
+            </div>
+          </div>
+        </a>
+  
+        <a href="https://xypher.io/subscription"  class="navi-item">
+          <div class="navi-link">
+            <div class="symbol symbol-40 bg-light mr-3">
+              <div class="symbol-label">
+                <span class="svg-icon svg-icon-md svg-icon-danger">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <polygon points="0 0 24 0 24 24 0 24"/>
+                      <path d="M4.85714286,1 L11.7364114,1 C12.0910962,1 12.4343066,1.12568431 12.7051108,1.35473959 L17.4686994,5.3839416 C17.8056532,5.66894833 18,6.08787823 18,6.52920201 L18,19.0833333 C18,20.8738751 17.9795521,21 16.1428571,21 L4.85714286,21 C3.02044787,21 3,20.8738751 3,19.0833333 L3,2.91666667 C3,1.12612489 3.02044787,1 4.85714286,1 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153  15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                      <path d="M6.85714286,3 L14.7364114,3 C15.0910962,3 15.4343066,3.12568431 15.7051108,3.35473959 L20.4686994,7.3839416 C20.8056532,7.66894833 21,8.08787823 21,8.52920201 L21,21.0833333 C21,22.8738751 20.9795521,23 19.1428571,23 L6.85714286,23 C5.02044787,23 5,22.8738751 5,21.0833333 L5,4.91666667 C5,3.12612489 5.02044787,3 6.85714286,3 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero"/>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="navi-text">
+              <div class="font-weight-bold">
+                Billing
+              </div>
+              <div class="text-muted">
+                My Xypher Pro subscription
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="separator separator-dashed my-7"></div>
+      <div>
+        <h5 class="mb-5">
+          Your Xypher Pro
+        </h5>
+              <div class="d-flex align-items-center bg-light-danger rounded p-5 gutter-b">
+          <div class="d-flex flex-column flex-grow-1 mr-2">
+            <a href="https://xypher.io/Buy/Pro" class="font-weight-normel text-dark-75 text-hover-primary font-size-lg mb-1">Xypher Pro</a>
+            <span class="text-muted font-size-sm"><b>$15</b></span>
+          </div>
+          <span class="font-weight-bolder text-danger py-1 font-size-lg">Buy Now</span>
+        </div>
+        
+  
+  
+      </div>
+    </div>
+  </div>
+  
+  
+    <div id="kt_scrolltop" class="scrolltop">
+    <span class="svg-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <polygon points="0 0 24 0 24 24 0 24"/>
+          <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1"/>
+          <path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-  rule="nonzero"/>
+        </g>
+      </svg>
+    </span>
+  </div>
+  
+      <script>
+        var KTAppSettings = {
+          "breakpoints": {
+            "sm": 576,
+            "md": 768,
+            "lg": 992,
+            "xl": 1200,
+            "xxl": 1200
+          },
+          "colors": {
+          "theme": {
+          "base": {
+            "white": "#ffffff",
+            "primary": "#0BB783",
+            "secondary": "#E5EAEE",
+            "success": "#1BC5BD",
+            "info": "#8950FC",
+            "warning": "#FFA800",
+            "danger": "#F64E60",
+            "light": "#F3F6F9",
+            "dark": "#212121"
+          },
+          "light": {
+            "white": "#ffffff",
+            "primary": "#D7F9EF",
+            "secondary": "#ECF0F3",
+            "success": "#C9F7F5",
+            "info": "#EEE5FF",
+            "warning": "#FFF4DE",
+            "danger": "#FFE2E5",
+            "light": "#F3F6F9",
+            "dark": "#D6D6E0"
+          },
+          "inverse": {
+            "white": "#ffffff",
+            "primary": "#ffffff",
+            "secondary": "#212121",
+            "success": "#ffffff",
+            "info": "#ffffff",
+            "warning": "#ffffff",
+            "danger": "#ffffff",
+            "light": "#464E5F",
+            "dark": "#ffffff"
+          }
+          },
+          "gray": {
+            "gray-100": "#F3F6F9",
+            "gray-200": "#ECF0F3",
+            "gray-300": "#E5EAEE",
+            "gray-400": "#D6D6E0",
+            "gray-500": "#B5B5C3",
+            "gray-600": "#80808F",
+            "gray-700": "#464E5F",
+            "gray-800": "#1B283F",
+            "gray-900": "#212121"
+          }
+          },
+          "font-family": "Poppins"
+          };
+      </script>
+      <script src="https://xypher.io/assets/plugins/global/plugins.bundle.js"></script>
+      <script src="https://xypher.io/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+      <script src="https://xypher.io/assets/js/scripts.bundle.js"></script>
+  
+      
+  <script src="https://xypher.io//assets/plugins/custom/datatables/datatables.bundle.js?v=7.1.0"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.5.1/js/dataTables.colReorder.min.js"></script>
+  
+  <script>
+    function round(value, decimals) {
+          return Number(Math.round(value +'e'+ decimals) +'e-'+ decimals).toFixed(decimals);
+    }
+    function currency_pretty(amount){
+      if (amount <=	100) {
+        let dollarUS = Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          useGrouping: true,
+  
+        });
+        return dollarUS.format(amount);
+      } else{
+        let dollarUS = Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          useGrouping: true,
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+  
+        });
+        return dollarUS.format(amount);
+      }
+  
+    }
+  
+    $(document).ready(function() {
+      currency_selected = $("#currency").val();
+  
+      var fiat_on = false;
+      var fiat_data = $.ajax({
+        dataType: 'json',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        type: 'GET',
+        url: 'https://xypher.io/Remote/API/MVP/Screener/Fiat',
+        success:function(data){
+          var fiat_on = true;
+        }
+      });
+  
+  
+  
+  
+      if (localStorage.hasOwnProperty('compact') == true) {
+        if (localStorage.getItem('compact') == 'On'){
+          $('#VolumeScanner').addClass("table-sm");
+        }
+      }
+  
+     $.when(fiat_data).done(function(a1){
+      var table = $('#VolumeScanner').DataTable({
+        "processing": true,
+        "serverSide": false,
+          "autoWidth": true,
+        "ajax": {
+              "dataType": "json",
+              "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+              "type": "POST",
+              "url": "https://xypher.io/Remote/API/MVP/VolumeScanner/GetPairs",
+              "data": function ( d ) {
+                d.ScanExchange =  $("#ScanExchange").val();
+                d.TimeFrame =  $('input[name=TimeFrame]:checked', '#vsf').val();
+                d.quote =  $("#quote").val();
+                d.MinVol =  $("#MinVol").val();
+                d.MaxVol =  $("#MaxVol").val();
+              },
+              "dataSrc":"",
+          },
+        "columns": [
+          {title:'Exchange',   data:function(data, type, row){
+                    var CoinName = data.CoinName;
+                    var Exchange = data.Exchange;
+                    var MainMarket = data.MainMarket;
+                    if (Exchange == 'Binance'){
+                      return `<a href="https://xypher.io/Screener/V/Binance/${MainMarket}/${CoinName}">Binance</a>`;
+                    } else{
+                      return `${Exchange}`;
+  
+                    }
+                },   name:'Exchange', className: 'dt-center'},
+            {title:'Symbol',   data:'MarketName',   name:'Symbol', "visible": true, className: 'dt-center'},
+            {title:'Quote',   data:'MainMarket',   name:'Quote', "visible": true, className: 'dt-center'},
+            {title:'Base',   data:'CoinName',   name:'Base', "visible": true, className: 'dt-center'},
+            {title:'Bought',   data:function(data, type, row){
+              try{
+                amount_dollars = data.stats.buy * a1[data.MainMarket];
+                return currency_pretty(amount_dollars);
+  
+                //return `${data.stats.buy * a1[data.MainMarket]}`;
+              } catch(err){ return 0;}
+            },   name:'Bought', className: 'dt-center', "visible": true},
+            {title:'Sold',   data:function(data, type, row){
+              try{
+                amount_dollars = data.stats.sell * a1[data.MainMarket];
+                return currency_pretty(amount_dollars);
+              } catch(err){ return 0;}
+            },   name:'Sold', className: 'dt-center', "visible": true},
+            {title:'Total Traded',   data:function(data, type, row){
+              try{
+                Arr = data.stats
+                total = Arr.buy + Arr.sell;
+                amount_dollars = total * a1[data.MainMarket];
+                return currency_pretty(amount_dollars);
+                //return round(parseFloat(Arr.buy)+parseFloat(Arr.sell),2);
+              } catch(err){return 0;}
+            },   name:'Total Traded', className: 'dt-center', "visible": true},
+            {title:'Diff',   data:function(data, type, row){
+              try{
+                Arr = data.stats;
+                diff = Arr.buy - Arr.sell
+                total = diff * a1[data.MainMarket]
+                if(total > 0){
+                  return `<span class="font-weight-bold text-success">${currency_pretty(total)}</span>`;
+                } else {
+                  return `<span class="font-weight-bold text-danger">${currency_pretty(total)}</span>`;
+                }
+              } catch(err){ return 0;}
+            },   name:'Diff', className: 'dt-center', "visible": true},
+            {title:'Total % 24H V',   data:function(data, type, row){
+              try{
+                Arr = data.stats;
+                Val = round(( (parseFloat(Arr.buy)+parseFloat(Arr.sell)) / data.VolUSD) * 100,2);
+                if (Val == 'NaN') {
+                  return 0;
+                } else if(Val > 5 && Val < 11){
+                      return `<span class="font-weight-bold text-info">${Val}%</span>`;
+                                  } else if(Val >= 11){
+                          return `<span class="font-weight-bold text-success">${Val}%</span>`;
+                    } else {
+                                      return `${Val}%`;
+                                  }
+              }
+              catch(err) {
+                return 0;
+              }
+            },   name:'Total % 24H V ', className: 'dt-center', "visible": true},
+            {title:'Vol',   data:function(data, type, row){
+              return currency_pretty(data.VolUSD);
+  
+              //
+            },   name:'Vol', className: 'dt-center', "visible": true},
+  
+            ],
+  
+                      "dom":"Bf<'row'<'col-sm-12'tr>>\n\t\t\t<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>",
+                      "buttons": [
+                {text: 'Mini',
+                          action: function (data ) {
+                              if (localStorage.hasOwnProperty('compact') == false) {
+                                  localStorage.setItem('compact','On');
+                                  $('#VolumeScanner').addClass("table-sm");
+                    table.columns.adjust().draw();
+                              }
+                              else if (localStorage.hasOwnProperty('compact') == true) {
+                                  if (localStorage.getItem('compact') == 'On'){
+                                      localStorage.setItem('compact','Off');
+                                      $('#VolumeScanner').removeClass("table-sm");
+                      table.columns.adjust().draw();
+                                  }
+                                  else if (localStorage.getItem('compact') == 'Off'){
+                                      localStorage.setItem('compact','On');
+                                      $('#VolumeScanner').addClass("table-sm");
+                      table.columns.adjust().draw();
+                                  }
+                              }
+                          },
+                          className: "btn-secondary"},
+                          {
+                text: '<span class="flaticon-questions-circular-button"></span>',
+                className:"btn-secondary",
+                action: function (data ) {
+                $('#kt_modal_1').modal('show')
+              }},
+                          {
+                              text: '<span class="flaticon2-expand"></span>',
+                              action: function (data ) {
+                                  Spandex();
+                          },
+                              className: "btn-secondary"},
+  
+                {
+                                    extend: "excel",
+                                    className: "btn-secondary"
+                            },
+                {
+                                    extend: "copy",
+                                    className: "btn-secondary "
+                            },
+                       {
+               extend: "colvis",
+               className: "btn-light-primary font-weight-bold mr-2",
+               text: "Data",
+               collectionLayout: 'fixed two-column'
+                      }],
+  
+                      "stateSave": true,
+            "scrollX": true,
+        "language": {
+          "processing": "Getting coins...",
+          "emptyTable": "No coins found :(",
+                  "search": "_INPUT_",
+                  "searchPlaceholder": "Search...",
+                  "sLengthMenu": "_MENU_"
+        },
+        "order": [[4, "desc"]],
+        });
+  
+              table.buttons().container().appendTo('#vs_b');
+  
+              $("#search_vs").html($(".dataTables_filter"));
+              $('input[type=radio][name=TimeFrame]').change(function() {
+              table.ajax.reload().draw();
+          });
+              $('.dataTables_filter input[type="search"]').css({'height':'38px', 'margin-top':'9px'});
+        $( "#ScanSub" ).click(function() {
+            table.ajax.reload().draw();
+        });
+  
+        setInterval(function () {
+        table.ajax.reload();
+      }, 10000);
+  
+      });
+    });
+  
+          function Spandex(){
+            // if already full screen; exit
+            // else go fullscreen
+            if (
+              document.fullscreenElement ||
+              document.webkitFullscreenElement ||
+              document.mozFullScreenElement ||
+              document.msFullscreenElement
+            ) {
+              if (document.exitFullscreen) {
+                document.exitFullscreen();
+              } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+              } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+              } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+              }
+            } else {
+              element = $('#TableContainer').get(0);
+              if (element.requestFullscreen) {
+                element.requestFullscreen();
+              } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+              } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+              } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+              }
+            }
+          };
+  
+    </script>
+      
+    </body>
+  </html>
+  

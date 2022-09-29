@@ -87,7 +87,7 @@ const LongShortChart = memo((props) => {
         justifyContent: "center",
         alignItems: "center",
         height: 35,
-        background: "#FF0000",
+        background: "#f23645",
         position: "relative",
         transition: "all .3s linear",
       }}
@@ -99,7 +99,7 @@ const LongShortChart = memo((props) => {
           position: "absolute",
           height: "100%",
           width: `${props?.longRate}%`,
-          backgroundColor: "#00FF00",
+          backgroundColor: "#089981",
           left: 0,
           transition: "all .3s linear",
         }}
@@ -199,7 +199,7 @@ const LongShortChart2 = memo((props) => {
         justifyContent: "center",
         alignItems: "center",
         height: 35,
-        background: "#FF0000",
+        background: "#f23645",
         position: "relative",
         transition: "all .3s linear",
       }}
@@ -225,7 +225,7 @@ const LongShortChart2 = memo((props) => {
           position: "absolute",
           height: "100%",
           width: `${props?.longRate}%`,
-          backgroundColor: "#00FF00",
+          backgroundColor: "#089981",
           left: 0,
           transition: "all .3s linear",
         }}
